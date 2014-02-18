@@ -11,13 +11,11 @@ import java.util.Properties;
 public class Global {
   public static WebDriver globalDriver;
   public static Properties properties;
+  public static boolean read = readProperties();
   public static  final OS OS_VERSION = detectOs();
   
   static {
     chooseDriver();
-  }
-  public static void assignUrls() {
-
   }
   public static void wait(int sec) {
     try {
