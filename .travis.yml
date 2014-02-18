@@ -6,3 +6,4 @@ before_install:
   - sudo apt-get update -qq
   - cd mvnseleniumproject/samplewebsite/
   - python -m SimpleHTTPServer 11111
+  - cd ..
