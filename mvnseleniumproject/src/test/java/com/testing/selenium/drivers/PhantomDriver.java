@@ -9,7 +9,13 @@ public class PhantomDriver extends Driver {
   }
   public WebDriver getDriver() {
     String path = Global.properties.getProperty("phantomLinux");
-    System.setProperty("phantomjs.binary.path", "resources/phantomjs/bin/phantomjs");
+    String binaryPath;
+    if (System.getProperty("sun.arch.data.model").contains("64")) {
+      binaryPath = "resources/phantomjs_64/bin/phantomjs";
+    } else {
+      binaryPath = "resources/phantomjs/bin/phantomjs";
+    }
+    System.setProperty("phantomjs.binary.path", binaryPath);
     driver = new PhantomJSDriver();
     return this.driver;
   }

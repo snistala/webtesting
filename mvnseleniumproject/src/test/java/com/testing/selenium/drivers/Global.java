@@ -11,14 +11,7 @@ import java.util.Properties;
 public class Global {
   public static WebDriver globalDriver;
   public static Properties properties;
-  public static boolean read = readProperties();
-  public static final String ROOT_URL = Global.properties.getProperty("rootUrl");
-  public static final String ACCOUNT_URL = Global.properties.getProperty("accountUrl");
-  public static final String SUPPORT_URL = Global.properties.getProperty("supportUrl");
-  public static final String TERMS_URL = Global.properties.getProperty("termsUrl");
-  public static final String CONTACT_URL = Global.properties.getProperty("contactUrl");;
   public static  final OS OS_VERSION = detectOs();
-  public static final boolean RUN_SUITE = Boolean.parseBoolean(Global.properties.getProperty("runSuite"));
   
   static {
     chooseDriver();
