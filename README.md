@@ -1,6 +1,6 @@
 Web testing using Selenium
 ==========================
-
+[![Build Status](https://travis-ci.org/snistala/webtesting.png?branch=master)](https://travis-ci.org/snistala/webtesting)
 
 This example project uses Selenium webdriver to automate testing on Chrome, Firefox and Phantomjs as a commandline browser.
 
