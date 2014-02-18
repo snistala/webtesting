@@ -20,7 +20,7 @@ import static org.junit.Assert.assertTrue;
 
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class SimpleTest extends GenericTest {
+public class SimpleTestCases extends GenericTest {
     private static final String HREF = "href";
     @BeforeClass
     public static void setUp(){

@@ -17,7 +17,7 @@ import static com.testing.selenium.drivers.Global.globalDriver;
 import static org.junit.Assert.assertEquals;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class ElementsTest extends GenericTest {
+public class ElementsTestCases extends GenericTest {
     private static final String HREF = "href";
 
     @BeforeClass
