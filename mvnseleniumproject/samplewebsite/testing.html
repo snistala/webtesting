@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testing new Html</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body style="background-color: #68A6DC">
+
+<div id="json-content">
+    <label>Firstname:
+        <input type="text" name="first-name" value="John" />
+    </label>
+    <label>Lastname:
+        <input type="text" name="last-name" value="Smith" />
+    </label>
+    <label>Age:
+        <input type="text" name="age" value="25" />
+    </label>
+
+</div>
+
+<br />
+<br /><br />
+
+
+We are testing html.
+<p id="sample-paragraph">This is a paragraph.</p>
+<p id="sample1-paragraph">This is not paragraph</p>
+<p id="old">This is a new page</p>
+<span id="sample-span">This is a sample span.</span>
+<span id="sample1-span">This is a complicated span</span>
+<table id="sample-table">
+    <thead>
+        <tr>
+            <th>Col1</th>
+            <th>Col2</th>
+            <th>Col3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="sample-row">
+            <td>Row1Item1</td>
+            <td>Row1Item2</td>
+            <td>Row1Item3</td>
+        </tr>
+        <tr class="sample-row">
+            <td>Row2Item1</td>
+            <td>Row2Item2</td>
+            <td>Row2Item3</td>
+        </tr>
+        <tr class="sample-row">
+            <td>Row3Item1</td>
+            <td>Row3Item2</td>
+            <td>Row3Item3</td>
+        </tr>
+    </tbody>
+</table>
+
+<form id="sample-form" method="GET" action="/submitform.html">
+    <input type="text" name="sample-username"/>
+    <input type="password" name="sample-password"/>
+    <button type="submit">Submit</button>
+</form>
+<form id="sample-form2" method="GET" action="/submiterror.html">
+    <input type="text" name="sample-username"/>
+    <input type="password" name="sample-password"/>
+    <button type="submit">Submit</button>
+</form>
+<br />
+<br />
+<br />
+<br />
+
+<div id="notification-container" style="display:none;">
+</div>
+<form id="sample-ajax-form" method="GET" action="/submiterror.html">
+    <input type="text" name="sample-username"/>
+    <input type="password" name="sample-password"/>
+    <button type="submit">Submit</button>
+</form>
+
+<div id="success-content" style="display: none">
+    <p>The form submission was sucess. Your account has been registered.</p>
+    <span>We've sent an email to your account.</span>
+    <p>Please confirm your email.</p>
+</div>
+<br />
+<br />
+<br /><br />
+
+<script type="text/javascript">
+
+    $("#sample-ajax-form").submit( function(e) {
+        e.preventDefault();
+        setTimeout(function() {
+            $("#notification-container").empty().hide();
+
+            var username = $("#sample-ajax-form input[name='sample-username']").val();
+            var password = $("#sample-ajax-form input[name='sample-password']").val();
+
+            if (!username || !password) {
+                $("#notification-container").append('<span class="error">Submission error!</span>');
+            } else {
+                $("#notification-container").append('<span class="success">Submission success!</span>');
+                $("#sample-ajax-form").hide();
+                $("#success-content").show(1000);
+            }
+
+            $("#notification-container").show(500);
+
+        }, 500);
+
+    });
+</script>
+
+</body>
+</html>
