@@ -1,0 +1,8 @@
+language: java
+jdk: oraclejdk7
+
+before_install:
+  # Start website
+  - sudo apt-get update -qq
+  - cd mvnseleniumproject/samplewebsite/
+  - python -m SimpleHTTPServer 11111
