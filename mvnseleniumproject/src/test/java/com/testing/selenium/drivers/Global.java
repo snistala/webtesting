@@ -24,7 +24,7 @@ public class Global {
     chooseDriver();
   }
   public static void assignUrls() {
-    
+
   }
   public static void wait(int sec) {
     try {
